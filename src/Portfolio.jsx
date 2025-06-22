@@ -97,7 +97,7 @@ export default function Portfolio() {
           </p>
         </section>
 
-        <section>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">Blogs & Documentation</h2>
           <ul className="list-disc list-inside space-y-2 text-blue-600">
             <li>
@@ -141,6 +141,23 @@ export default function Portfolio() {
               </a>
             </li>
           </ul>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Community Engagement</h2>
+          <p className="text-sm text-gray-700 mb-4">
+            A glimpse of some in-person talks, community meetups, and devrel events I’ve participated in:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+  {["/1.jpeg", "/2.jpeg", "/3.jpeg", "/4.jpeg", "/5.jpeg", "/6.jpeg"].map((src, i) => (
+    <img
+      key={i}
+      src={src}
+      alt={`Community image ${i + 1}`}
+      className="rounded-xl shadow object-cover w-full h-64"
+    />
+  ))}
+</div>
+
         </section>
       </main>
 
